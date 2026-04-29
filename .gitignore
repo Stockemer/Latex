@@ -49,3 +49,6 @@ Thumbs.db
 *.fls
 *.aux
 *.log
+*.pdf
+*.synctex.gz
+*.out
