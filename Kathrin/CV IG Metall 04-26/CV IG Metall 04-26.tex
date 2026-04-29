@@ -1,0 +1,295 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\moderncvcolor{burgundy}   
+% moderncv themes
+\moderncvstyle{fancy}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+
+                            % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\usepackage[none]{hyphenat}
+\sloppy
+
+\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}  % FIXME: using spanish breaks moderncv
+
+\hyphenation{Familie}
+
+% personal data
+\name{Kathrin}{Pejic}
+\title{Lebenslauf}                               % optional, remove / comment the line if not wanted
+\born{12.01.1990}                                 % optional, remove / comment the line if not wanted
+\address{Isingstr. 18}{12435}{Berlin}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{015901347071}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{kathrinpejic1990\allowbreak@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+
+% Social icons
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
+%\social[twitter]{ji\_doe}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+%\social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
+% \social[stackoverflow]{0000000/johndoe}            % optional, remove / comment the line if not wanted
+% \social[bitbucket]{jdoe}                           % optional, remove / comment the line if not wanted
+% \social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
+% \social[orcid]{0000-0000-000-000}                  % optional, remove / comment the line if not wanted
+% \social[researchgate]{jdoe}                        % optional, remove / comment the line if not wanted
+% \social[researcherid]{jdoe}                        % optional, remove / comment the line if not wanted
+% \social[telegram]{jdoe}                            % optional, remove / comment the line if not wanted
+% \social[whatsapp]{12345678901}                     % optional, remove / comment the line if not wanted
+% \social[signal]{12345678901}                       % optional, remove / comment the line if not wanted
+% \social[matrix]{@johndoe:matrix.org}               % optional, remove / comment the line if not wanted
+% \social[googlescholar]{googlescholarid}            % optional, remove / comment the line if not wanted
+
+
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+\section{Berufserfahrung}
+\cventry{2025 bis 2026}{Pädagogische Fachberatung und Mentorin}{Vielfältiges Menschenbild gUG}{}{}{
+\begin{itemize}
+\item Erarbeitung eines Ausbildungskonzepts und Ausbildungsplans
+\item Mentoring der Mitarbeitenden in Ausbildung und Praktikum
+\item Pädagogische Fachberatung der Mitarbeitenden
+\item Workshops für Mitarbeitende zu verschiedenen pädagogischen Themen
+\item Konzeptionelle Arbeit zur Qualitätssicherung
+\end{itemize}}
+
+\cventry{2019 bis 2025}{Erzieherin und Mentorin}{KiTa Liebenwalder Straße, Kindergärten City}{}{}{
+\begin{itemize}
+\item Begleitung von bis zu 25 Kindern im offenen U3-Bereich
+\item Mentoring von bis zu 11 Mitarbeitenden 
+\item Entwerfen von Konzepten und Ausbildungsplänen
+\item Dienstplanung
+\end{itemize}}
+
+\cventry{2018 bis 2019}{Erzieherin}{KiTa „KiTa am Alex“, Drachenreiter gGmbh}{}{}{
+\begin{itemize}
+\item Begleitung von bis zu 70 Kindern im offenen Konzept 
+\end{itemize}
+}
+
+\cventry{2016 bis 2018}{Erzieherin}{KiTa „Berliner Kindheit“, Berliner Kindheit}{}{}{
+\begin{itemize}
+\item Begleitung von bis zu 20 Kindern im U3-Bereich
+\end{itemize}}
+
+\cventry{2011 bis 2015}{Erzieherin und Praxisanleiterin}{KiTa „Kinderinsel“, Unionhilfswerk gGmbH}{}{}{
+\begin{itemize}
+\item Begleitung von bis zu zu 25 Kindern im U3-Bereich
+\item Anleitung von PraktikantInnen
+\item Dienstplanung
+\end{itemize}}
+
+\cventry{2010-2011}{Persönliche Assistenz}{Lebenswege gGmbH}{}{}{
+\begin{itemize}
+\item Persönliche Assistenz für Menschen mit Beeinträchtigung
+\item Begleitung von drei KlientInnen im häuslichen Umfeld
+\end{itemize}}
+
+\cventry{2008 und 2009}{Zwei dreimonatige Praktika}{Einrichtungen für Menschen mit Beeinträchtigungen}{}{}{\begin{itemize}
+\item Mosaik Werkstätten und CaritasWohnen
+\item Aufgaben im Bereich Pflege und Betreuung
+\item Gestaltung von Aktivitäten
+\item Alltagsbegleitung
+\end{itemize}}
+
+\cventry{2008}{Dreimonatiges Praktikum}{Psychiatrisch - neurologischen Station, St. Joseph - Krankenhauses Weißensee}{}{}{\begin{itemize}
+\item Aufgaben im Bereich Pflege und Betreuung
+\item Unterstützung bei therapeutischen Angeboten und medizinischen Maßnahmen
+\end{itemize}}
+
+\section{Ausbildung}
+\cventry{2024 bis 2026}{Bachelorstudium Bildungswissenschaften}{FernUniversität Hagen}{}{}{} 
+\cventry{2022 bis 2023}{Qualifizierung zur Praxismentorin}{Kindergärten City}{}{}{}
+\cventry{2021}{Fortbildung zur Mentorin}{ProInklusio Fachschule}{}{}{}
+\cventry{2011}{Weiterbildung „Angleichung an den Erzieher“}{Elisabeth Schule}{}{}{}
+\cventry{2007 bis 2010}{Ausbildung zur staatlich anerkannten Heilerziehungspflegerin}{Elisabeth Schule}{}{}{}
+
+\cventry{2006 bis 2007}{Berufsvorbereitungsjahr}{Berufsfachschule der St. Elisabeth Stiftung für Sozialwesen}{}{}{}
+\cventry{2004 bis 2006}{Mittlerer Schulabschluss}{Max-Eyth-Oberschule}{}{}{}
+
+\section{Engagement}
+\cventry{2025}{Teilnahme an der Konferenz für gewerkschaftliche Erneuerung "Gegenmacht im Gegenwind"}{Rosa-Luxemburg-Stiftung}{Referentin des Praxisworkshops "Aktiv gegen die Misere in den Kitas: Arbeiten mit dem Schattenbuch"}{}{}
+\cventry{2025}{Referentin der ersten gewerkschaftlichen Berufsanfängerseminare für Erzieher*innen}{verdi}{}{}{}
+\cventry{2024-2025}{Gewähltes Tarifkommissionsmitglied}{ver.di Betriebsgruppe Kindergärten City}{Tarifkommission des Tarifvorhabens pädagogische Qualität und Entlastung}{}{}
+\cventry{seit 2024}{Ausbildungsbewegung}{ver.di.}{Aufbau der Ausbildungsbewegung der Berliner KiTa - Eigenbetriebe und einer
+nachhaltigen Ausbildungsvertretung}{}{} 
+\cventry{seit 2024}{Aktivistische Mitarbeit}{Bündnis Widersetzen}{Mitarbeit bei Demonstrationsaufrufen und gewerkschaftlicher Mobilisierung zu an-
+tifaschistischen Protestaktionen}{}{} 
+\cventry{2024}{Teilnahme an der Organizing Akademie}{DGB Jugend}{}{}{} 
+\cventry{2019 bis 2020}{Aktivistische Mitarbeit}{Anonymous for the voiceless
+/ Animal Rights March}{Mitwirkung bei tierrechtsaktivistischen Aktionen}{}{} 
+
+
+%\\section{Engagement}
+%\\cventry{seit 2024}{Gewähltes Tarifkommissionsmitglied}{ver.di}{}{}%\{Tarifkommission des Tarifvorhabens pädagogische Qualität und Entlastung}
+%\\cventry{seit 2024}{Ausbildungsbewegung}{ver.di}{}{}{Aufbau der Ausbildungsbewegung der Berliner KiTa - Eigenbetriebe und einer nachhaltigen Ausbildungsvertretung}
+%\\cventry{seit 2024}{Aktivistische Mitarbeit}{Bündnis Widersetzen}{}{}{Mitarbeit bei Demonstrationsaufrufen und gewerkschaftlicher Mobilisierung zu antifaschistischen Protestaktionen}
+%\\cventry{2019 bis 2020}{Aktivistische Mitarbeit}{Anonymous for the voiceless / Animal Rights March}{}{}{Mitwirkung bei tierrechtsaktivistischen Aktionen}
+
+
+%\section{Languages}
+%\cvitemwithcomment{Language 1}{Skill level}{Comment}
+%\cvitemwithcomment{Language 2}{Skill level}{Comment}
+%\cvitemwithcomment{Language 3}{Skill level}{Comment}
+%\cvitemwithcomment{Language 4}{Skill level}{Comment}
+
+%\section{Computer skills}
+%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+%\section{Skill matrix}
+%\cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
+%% Skill matrix as an alternative to rate one's skills, computer or other. 
+
+%% Adjusts width of skill matrix columns. 
+%% Usage \setcvskillcolumns[<width>][<factor>][<exp_width>]
+%% <width>, <exp_width> should be lengths smaller than \textwidth, <factor> needs to be between 0 and 1.
+%% Examples:
+% \setcvskillcolumns[5em][][]%    adjust first column. Same as \setcvskillcolumns[5em]
+% \setcvskillcolumns[][0.45][]%   adjust third (skill) column. Same as \setcvskillcolumns[][0.45]
+% \setcvskillcolumns[][][\widthof{``Year''}]%     adjust fourth (years) column.
+% \setcvskillcolumns[][0.45][\widthof{``Year''}]%
+% \setcvskillcolumns[\widthof{``Languag''}][0.48][]
+% \setcvskillcolumns[\widthof{``Languag''}]%
+
+%% Adjusts width of legend columns. Usage \setcvskilllegendcolumns[<width>][<factor>]
+%% <factor> needs to be between 0 and 1. <width> should be a length smaller than \textwidth
+%% Examples:
+% \setcvskilllegendcolumns[][0.45]
+% \setcvskilllegendcolumns[\widthof{``Legend''}][0.45]
+% \setcvskilllegendcolumns[0ex][0.46]% this is usefull for the banking style
+
+%% Add a legend if you are using \cvskill{<1-5>} command or \cvskillentry
+%% Usage \cvskilllegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
+% \cvskilllegend % insert default legend without lines
+%\cvskilllegend*[1em]{}% adjust post spacing
+% \cvskilllegend*{Legend}%  Alternatively add a description string
+%% adjust the legend entries for other languages, here German
+% \cvskilllegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte\,/\,Spezialist]{Legende}
+
+%% Alternative legend style with the first three skill levels in one column
+%% Usage \cvskillplainlegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
+% \setcvskilllegendcolumns[][0.6]%  works for classic, casual, banking
+% \setcvskilllegendcolumns[][0.55]%  works better for oldstyle and fancy
+% \cvskillplainlegend{}
+% \cvskillplainlegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte/Guru]{Legende}
+
+%% Add a head of the skill matrix table with descriptions.
+%% Usage \cvskillhead[<post_padding>][<Level>][<Skill>][<Years>][<Comment>]%
+%\cvskillhead[-0.1em]%   this inserts the standard legend in english and adjust padding
+%% Adjust head of the skill matrix for other languages
+% \cvskillhead[0.25em][Level][F\"ahigkeit][Jahre][Bemerkung]
+
+%% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}% 
+%% Example usages:
+%\cvskillentry*{Language:}{3}{Python}{2}{I'm so experienced in Python and have realised a million projects. At least.}
+%\cvskillentry{}{2}{Lilypond}{14}{So much sheet music! Man, I'm the best!}
+%\cvskillentry{}{3}{\LaTeX}{14}{Clearly I rock at \LaTeX}
+%\cvskillentry*{OS:}{3}{Linux}{2}{I only use Archlinux btw}% notice the use of the starred command and the optional 
+%\cvskillentry*[1em]{Methods}{4}{SCRUM}{8}{SCRUM master for 5 years}
+%% \cvskill{<0-5>} command
+% \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
+
+%\section{Interests}
+%\cvitem{hobby 1}{Description}
+%\cvitem{hobby 2}{Description}
+%\cvitem{hobby 3}{Description}
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book2}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+
+\end{document}
+
+
+%% end of file `template.tex'.
+
