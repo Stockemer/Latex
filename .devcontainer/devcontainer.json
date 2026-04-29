@@ -1,0 +1,92 @@
+// For format details, see https://aka.ms/devcontainer.json
+{
+    "name": "LaTeX Dev",
+
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+
+    "remoteUser": "vscode",
+
+    "mounts": [
+        "source=${localEnv:HOME}/.gitconfig,target=/mnt/host-gitconfig,type=bind,readonly,consistency=cached"
+    ],
+
+    "containerEnv": {
+        "NOTIFY_TOKEN": "${localEnv:NOTIFY_TOKEN}"
+    },
+
+    "runArgs": [
+        "--env-file=.devcontainer/.secrets",
+        "--security-opt=no-new-privileges:true",
+        "--cap-drop=ALL",
+        "--cap-add=CHOWN",
+        "--cap-add=DAC_OVERRIDE",
+        "--cap-add=FOWNER",
+        "--cap-add=SETUID",
+        "--cap-add=SETGID",
+        "--memory=8g",
+        "--memory-swap=8g",
+        "--cpus=4",
+        "--add-host=host.docker.internal:host-gateway"
+    ],
+
+    "postCreateCommand": ".devcontainer/post-create.sh",
+
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "workbench.colorTheme": "Tokyo Night Storm",
+
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.profiles.linux": {
+                    "zsh": {
+                        "path": "/usr/bin/zsh"
+                    }
+                },
+
+                "github.copilot.chat.enabled": false,
+                "chat.hideAIFeatures": true,
+                "extensions.autoUpdate": false,
+                "extensions.autoCheckUpdates": false,
+
+                "latex-workshop.latex.recipe.default": "lastUsed",
+                "latex-workshop.latex.recipes": [
+                    {
+                        "name": "latexmk (pdf)",
+                        "tools": ["latexmk"]
+                    }
+                ],
+                "latex-workshop.latex.tools": [
+                    {
+                        "name": "latexmk",
+                        "command": "latexmk",
+                        "args": [
+                            "-synctex=1",
+                            "-interaction=nonstopmode",
+                            "-file-line-error",
+                            "-pdf",
+                            "%DOC%"
+                        ]
+                    }
+                ],
+
+                "latex-workshop.latex.autoBuild.run": "onFileChange",
+                "latex-workshop.view.pdf.viewer": "tab",
+                "latex-workshop.chktex.enabled": true,
+                "latex-workshop.chktex.run": "onType",
+                "latex-workshop.bibtex-format.enabled": true
+            },
+
+            "extensions": [
+                "sst-dev.opencode",
+                "James-Yu.latex-workshop",
+                "enkia.tokyo-night"
+            ],
+
+            "unwantedRecommendations": [
+                "github.copilot-chat"
+            ]
+        }
+    }
+}

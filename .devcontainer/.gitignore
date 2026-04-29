@@ -1,0 +1,22 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.xdv
+*.run.xml
+*.bcf
+
+# OS files
+.DS_Store
+
+# Secrets (never commit)
+.secrets
