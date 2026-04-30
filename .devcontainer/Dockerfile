@@ -44,6 +44,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     texlive-bibtex-extra \
     texlive-science \
     texlive-pictures \
+
+    texlive-lang-german \
     latexmk \
     biber \
     chktex \
